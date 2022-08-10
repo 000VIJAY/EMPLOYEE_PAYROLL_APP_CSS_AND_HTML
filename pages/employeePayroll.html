@@ -26,6 +26,7 @@
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content ">
                 <label class="label text" for="profile">Profile image </label>
@@ -81,9 +82,9 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="salary">Choose your salary</label>
-                <input class="input" type="range" name="salary" id="salary" min="300000"
-                max="500000" step="100" value="400000">
-                <output class="salary-output text" for="salary">400000</output>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                    value="400000">
+                <output class="salary-output" for="salary">400000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="statrtDate">Start Date</label>
@@ -153,13 +154,21 @@
             <div class="buttonParent">
                 <a class="resetButton button cancelButton">Cancel</a>
             </div>
-            <div class="submit-reset">
+            <div class="buttonParent submit-reset">
                 <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                 <button type="reset" class="resetButton button">Reset</button>
             </div>
         </form>
-    </div>
 
+    </div>
+    <script>
+        const salary = document.querySelector('#salary');
+        const output = document.querySelector('.salary-output');
+        output.textContent = salary.value;
+        salary.addEventListener('input', function () {
+            output.textContent = salary.value;
+        });
+    </script>
 </body>
 
 </html>

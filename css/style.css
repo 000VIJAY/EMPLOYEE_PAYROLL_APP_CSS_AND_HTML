@@ -138,3 +138,8 @@ select{
     text-decoration: none;
     text-align: center;
 }
+.text-error{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
