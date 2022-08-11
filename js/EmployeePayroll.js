@@ -1,6 +1,5 @@
 class EmployeeePayrollData
 {
-
         get gender() {return this._gender;}
         set gender(gender){
             let genederRegex = RegExp('^[M,F]{1}');
@@ -12,7 +11,7 @@ class EmployeeePayrollData
         set startDate(startDate) {this._startDate = startDate;}
         get name(){return this._name}
         set name(name){ 
-            let nameRegex = RegExp('^[A-Z]{1}[a-z]{3,}$');
+            let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
             if (nameRegex.test(name))
             this._name=name;
             else throw 'Name is incorrect';

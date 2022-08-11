@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Employee Payroll</title>
-    <script defer src="../js/EmployeePayroll.js"></script>
+    <script src="../js/EmployeePayroll.js"></script>
+    <script src="../js/payrollForm.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+                <input class="input" onchange="namechange(event)" type="text" id="name" name="name" placeholder="Your name.." required>
                 <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content ">
@@ -162,14 +163,5 @@
         </form>
 
     </div>
-    <script>
-        const salary = document.querySelector('#salary');
-        const output = document.querySelector('.salary-output');
-        output.textContent = salary.value;
-        salary.addEventListener('input', function () {
-            output.textContent = salary.value;
-        });
-    </script>
 </body>
-
 </html>
