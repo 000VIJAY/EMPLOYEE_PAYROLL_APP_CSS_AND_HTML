@@ -10,7 +10,7 @@ class EmployeeePayrollData
         get startDate() {return this._startDate;}
         set startDate(startDate) {this._startDate = startDate;}
         get name(){return this._name}
-        set name(name){ 
+        set name(name){
             let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
             if (nameRegex.test(name))
             this._name=name;
@@ -45,6 +45,6 @@ class EmployeeePayrollData
     {
         const option = {year: 'numeric' , month: 'long', day: 'numeric'};
         const empDate = !this._startDate ? "undefined":new Date().toLocaleDateString("en-us",option);
-        return "id = "+this.id+", name = "+this.name +", Gender = "+this.gender+", profile Pic = "+this.profilePic +", department = "+this.department+", salary = "+this.salary+" , StartDate = "+empDate +", note = "+this.note;  
+        return ", name = "+this.name +", Gender = "+this.gender+", profile Pic = "+this.profilePic +", department = "+this.department+", salary = "+this.salary+" , StartDate = "+empDate +", note = "+this.note;
     }
 }
